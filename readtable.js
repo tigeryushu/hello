@@ -11,3 +11,43 @@ function getCellContent(c){
 for(var i=0; i<rows.length; i++){
   console.log(getCellContent(rows[i].cells[1]));
 }
+
+/***********************************************************/
+
+var rsContent=[];
+
+//Add values to rsContent
+for(var i=0; i<rows.length; i++){
+    rsContent[i]=getCellContent(rows[i].cells[1]);
+}
+
+//Show values of rsContent
+console.log(rsContent);
+
+//Clear table values
+for(var i=0; i<rows.length; i++){
+    rows[i].cells[1].textContent='';
+}
+
+//Reset table values from saved rsContent
+for(var i=0; i<rows.length; i++){
+    rows[i].cells[1].textContent=rsContent[i];
+}
+
+/***********************************************************/
+
+//Create a new table
+var tb2 = document.createElement("table");
+
+//Append table to browser
+document.body.append(tb2);
+
+//Add a new row with value test
+tb2.insertRow().insertCell().textContent='test';
+
+//Delete test record
+tb2.deleteRow(0);
+
+for(var i=0; i<rsContent.length; i++){
+    tb2.insertRow().insertCell().textContent=rsContent[i];
+}
