@@ -101,6 +101,10 @@ for (var i = 0; i < 30; i++) {
 
 /***********************************************************/
 
+document.body.textContent='';
+var tb= document.createElement('table');
+document.body.append(tb);
+
 for (var i = 0; i < arrNumbers.length; i++) {
     var r = tb.insertRow();
     if (i % 2 == 0) r.setAttribute('class', 'blue');
