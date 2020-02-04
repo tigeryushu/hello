@@ -80,3 +80,23 @@ for (var i = 0; i < 10; i++) {
 }
 
 /***********************************************************/
+
+document.body.textContent = '';
+
+var tb = document.createElement('table');
+
+document.body.append(tb);
+
+for (var i = 0; i < 30; i++) {
+    var r = tb.insertRow();
+    for (var j = 0; j < 30; j++) {
+        var c=r.insertCell();
+         c.textContent = 'X';
+         if(Math.abs(i-j)<5 || Math.abs(i+j-29)<5) 
+              c.style.color='red';
+        
+    }
+}
+
+
+/***********************************************************/
