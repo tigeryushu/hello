@@ -51,3 +51,14 @@ tb2.deleteRow(0);
 for(var i=0; i<rsContent.length; i++){
     tb2.insertRow().insertCell().textContent=rsContent[i];
 }
+
+/***********************************************************/
+
+for (var i = 0; i < tb.rows.length; i++) {
+    var r = tb.rows[i];
+    for (var j = 1; j < r.cells.length; j++) {
+        r.cells[j].style.backgroundColor = 'blue';
+    }
+}
+
+/***********************************************************/
