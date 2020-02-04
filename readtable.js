@@ -100,3 +100,16 @@ for (var i = 0; i < 30; i++) {
 
 
 /***********************************************************/
+
+for (var i = 0; i < arrNumbers.length; i++) {
+    var r = tb.insertRow();
+    if (i % 2 == 0) r.setAttribute('class', 'blue');
+    else r.setAttribute('class', 'gray');
+    var arr2 = arrNumbers[i];
+    for (var j = 0; j < arr2.length; j++) {
+        var c = r.insertCell();
+        c.textContent = arr2[j];
+    }
+}
+
+/***********************************************************/
