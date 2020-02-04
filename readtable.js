@@ -62,3 +62,17 @@ for (var i = 0; i < tb.rows.length; i++) {
 }
 
 /***********************************************************/
+
+//Open a new tab
+var tb= document.createElement('table');
+
+document.body.append(tb);
+
+for(var i=0;i<10;i++){
+ var r=tb.insertRow();
+ for(var j=0;j<10;j++){
+  r.insertCell().textContent=''+i+j;
+ }
+}
+
+/***********************************************************/
